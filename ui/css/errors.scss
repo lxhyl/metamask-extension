@@ -1,44 +1,44 @@
-.critical-error-container {
-  color: var(--color-text-default);
-  background-color: var(--color-background-default);
-  border: 1px solid var(--color-info-default);
-  border-radius: 8px;
+.critical-error {
   padding: 16px;
-  margin-top: 18px;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  position: relative;
-}
+  max-width: 600px;
+  margin: 0 auto;
 
-.critical-error-div {
-  color: red;
-  background-color: yellow;
-  text-align: left;
-}
+  &__alert {
+    color: var(--color-text-default);
+    background-color: var(--color-error-muted);
+    border: 1px solid var(--color-error-default);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
 
-.critical-error-paragraph {
-  margin: 5px;
-  padding: 5px;
-}
+    &__message {
+      margin-bottom: 16px;
+    }
 
-.critical-error-bq {
-  margin: 20px 0 20px 5px;
-  padding-left: 5px;
-  border-left: 1px solid grey;
-  max-width: 100%;
-}
+    &__button {
+      height: 40px;
+      border-radius: 20px;
+      padding-left: 16px;
+      padding-right: 16px;
+      background-color: var(--color-primary-default);
+      color: var(--color-primary-inverse);
+      border: 1px solid var(--color-primary-default);
+      margin: 0 auto;
+    }
+  }
 
-.critical-error-anchor {
-  color: blue;
-}
+  &__paragraph {
+    color: var(--color-text-default);
+    text-align: center;
 
-.critical-error-anchor:hover {
-  color: green;
-}
+    &__link {
+      color: var(--color-primary-default);
 
-.critical-error-button {
-  color: var(--color-primary-default);
-  background: transparent;
-  white-space: pre;
+      &:hover {
+        color: var(--color-primary-alternative);
+      }
+    }
+  }
 }

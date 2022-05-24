@@ -31,20 +31,20 @@ export async function getErrorHtml(supportLink, metamaskState) {
   const t = getLocaleContext(currentLocaleMessages, enLocaleMessages);
 
   return `
-    <div class="critical-error-container">
-      <div class="critical-error-div">
-        ${t('troubleStarting')}        
-      </div>
-      <div>
-        <button id='critical-error-button' class="critical-error-button">
+    <div class="critical-error">
+      <div class="critical-error__alert">
+        <p class="critical-error__alert__message">
+          ${t('troubleStarting')}        
+        </p>   
+        <button id='critical-error-button' class="critical-error__alert__button">
           ${t('restartMetamask')}
-        </button>      
-      </div>
-      <p class="critical-error-paragraph">    
+        </button>
+      </div>    
+      <p class="critical-error__paragraph">    
         ${t('stillGettingMessage')}
         <a           
           href=${supportLink} 
-          class="critical-error-anchor" 
+          class="critical-error__paragraph__link" 
           target="_blank" 
           rel="noopener noreferrer">
             ${t('sendBugReport')}
